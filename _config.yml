@@ -1,5 +1,5 @@
 markdown: redcarpet
-sieurl:  localhost:4000
+sieurl:  ""
 exclude: ['README.md']
 
 sass:
