@@ -1,0 +1,24 @@
+/*=======================================
+=            ESTILOS BOTONES            =
+=======================================*/
+
+.button-round {
+	padding: 1rem 2rem;
+	background: $color-secundario;
+	color: white;
+	border: 2px solid $color-primario;
+	font-familiy: $font-parrafos !important;
+	font-size: .8rem;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	transition: all .3s;
+	text-transform: uppercase;
+	display: inline-block;
+	&:hover {
+		background: lighten($color-secundario, 10%);
+		transition: all .3s;
+	}
+}
+
+
+/*=====  End of ESTILOS BOTONES  ======*/

@@ -1,0 +1,11 @@
+markdown: redcarpet
+sieurl:  localhost:4000
+exclude: ['README.md']
+
+sass:
+      sass_dir: _sass
+      style: nested
+
+
+livereload: true
+reload_port: 4001

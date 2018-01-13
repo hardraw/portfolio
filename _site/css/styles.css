@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/**
+ *
+ * VARIABLES PRINCIPALES
+ *
+ */
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #1B1D3F;
+  color: #00A099;
+  font-family: "Muli", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.row {
+  max-width: 1000px;
+  margin: auto; }
+
+/*=======================================
+=            ESTILOS BOTONES            =
+=======================================*/
+.button-round, .home-hero-links a {
+  padding: 1rem 2rem;
+  background: #00A099;
+  color: white;
+  border: 2px solid #1B1D3F;
+  font-familiy: "Muli", sans-serif !important;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all .3s;
+  text-transform: uppercase;
+  display: inline-block; }
+  .button-round:hover, .home-hero-links a:hover {
+    background: #00d3ca;
+    transition: all .3s; }
+
+/*=====  End of ESTILOS BOTONES  ======*/
+/*======================================
+=            ESTILOS HEADER            =
+======================================*/
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+  background: rgba(12, 13, 27, 0.5);
+  display: grid;
+  grid-template-columns: 100px 50%;
+  grid-template-areas: "logo navigation";
+  justify-content: space-between; }
+
+.block-logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 4rem; }
+  .block-logo img {
+    width: 25px;
+    height: 40px; }
+
+/*=====  End of ESTILOS HEADER  ======*/
+/*======================================
+=            ESTILOS FOOTER            =
+======================================*/
+footer {
+  background: #1B1D3F;
+  padding: 4rem 0;
+  position: relative; }
+  footer .footer-content-text {
+    padding: 2rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  footer .footer-content-logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    footer .footer-content-logo img {
+      width: 232px;
+      height: 138px; }
+
+/*=====  End of ESTILOS FOOTER  ======*/
+/*==============================================
+=            ESTILOS MENÚ PRINCIPAL            =
+==============================================*/
+.main-menu {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  color: white;
+  grid-area: navigation;
+  border-left: 1px solid rgba(0, 160, 153, 0.6); }
+  .main-menu ul {
+    display: flex; }
+    .main-menu ul li {
+      width: 100%;
+      text-align: center;
+      list-style: none; }
+      .main-menu ul li a {
+        display: block;
+        color: #00A099;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-family: "Muli", sans-serif;
+        color: white;
+        letter-spacing: 1px;
+        padding: 2rem 0; }
+        .main-menu ul li a:hover {
+          background: #1d1f43; }
+
+/*=====  End of ESTILOS MENÚ PRINCIPAL  ======*/
+/*=========================================
+=            ESTILOS HOME PAGE            =
+=========================================*/
+/* Estilos bloques */
+.block-proyectos, .block-servicios, .block-testimonios {
+  padding: 6rem 4rem;
+  min-height: 100vh;
+  position: relative;
+  max-width: 100vw; }
+  .block-proyectos:after, .block-servicios:after, .block-testimonios:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    border-radius: 100%;
+    border: 1px solid #00A099;
+    bottom: -15px;
+    left: 50%;
+    z-index: 30; }
+  .block-proyectos:before, .block-servicios:before, .block-testimonios:before {
+    content: "";
+    background: #00A099;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    bottom: -40px;
+    left: 50%;
+    z-index: 30; }
+
+.title-block-home {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 5px;
+  margin-bottom: 4rem; }
+
+.text-rotate {
+  transform: rotate(270deg);
+  transform-origin: left top;
+  position: absolute;
+  z-index: 22;
+  font-size: .8rem;
+  letter-spacing: 15px;
+  line-height: 0;
+  font-family: "Muli", sans-serif;
+  writing-mode: lr-tb;
+  display: inline-block;
+  bottom: 30vh; }
+
+.home-hero {
+  background: radial-gradient(circle farthest-corner at 50vw 150vh, #00A099, #1B1D3F 80%);
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-kerning: normal;
+  position: relative;
+  z-index: 10; }
+  .home-hero img {
+    margin-bottom: 5rem; }
+  .home-hero-links {
+    display: flex; }
+    .home-hero-links a {
+      text-align: center;
+      display: block;
+      width: 170px;
+      margin: 1rem; }
+  .home-hero:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #00A099;
+    bottom: -15px;
+    margin: auto;
+    z-index: 30; }
+  .home-hero:before {
+    content: "";
+    background: #00A099;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    bottom: -40px;
+    margin: auto;
+    z-index: 30; }
+
+.block-proyectos {
+  background: radial-gradient(circle farthest-corner at 50vw -100vh, #00A099, #1B1D3F 90%);
+  position: relative; }
+  .block-proyectos .title-block-home {
+    color: #00d3ca; }
+  .block-proyectos .slider-proyectos {
+    width: 100vw;
+    margin: auto; }
+  .block-proyectos .block-proyectos-single {
+    width: 60vw;
+    height: auto;
+    margin: auto;
+    display: grid;
+    pointer-events: auto;
+    justify-content: center;
+    align-content: center;
+    transform-style: preserve-3d;
+    grid-template-columns: 200px 230px 190px 190px;
+    grid-template-rows: 50px 148px 98px 98px;
+    grid-template-areas: "... ... categoria categoria" "... titulo titulo titulo " "... ... texto texto" "... ... boton boton"; }
+    .block-proyectos .block-proyectos-single .block-proyecto-image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 400px;
+      height: 400px;
+      animation: desplaza .5s ease; }
+    .block-proyectos .block-proyectos-single .block-proyecto-categoria {
+      grid-area: categoria;
+      font-size: .8rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: white; }
+    .block-proyectos .block-proyectos-single .block-proyecto-resumen {
+      grid-area: texto;
+      color: white;
+      transform: translateZ(20px); }
+    .block-proyectos .block-proyectos-single .block-proyecto-titulo {
+      grid-area: titulo;
+      font-size: 5rem;
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: 500;
+      text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+      transition: all .3s;
+      transform: translateZ(50px); }
+    .block-proyectos .block-proyectos-single .block-proyecto-link {
+      grid-area: boton;
+      display: flex;
+      align-items: flex-end;
+      transform: translateZ(50px); }
+
+.block-servicios {
+  background: #F8F8F8; }
+
+.block-testimonios {
+  background: radial-gradient(circle farthest-corner at 50vw 150vh, #00A099, #1B1D3F 80%); }
+  .block-testimonios .content-testimonios {
+    max-width: 60vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "foto text";
+    grid-gap: 4rem;
+    align-items: center; }
+    .block-testimonios .content-testimonios-image {
+      grid-area: foto; }
+      .block-testimonios .content-testimonios-image img {
+        border-radius: 100%;
+        border: 2px solid #1B1D3F; }
+    .block-testimonios .content-testimonios-text blockquote {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      position: relative; }
+      .block-testimonios .content-testimonios-text blockquote:after {
+        content: '"';
+        font-family: "Times New Roman", serif;
+        font-size: 1.5rem;
+        color: #00d3ca; }
+      .block-testimonios .content-testimonios-text blockquote:before {
+        content: '"';
+        position: absolute;
+        left: -1rem;
+        font-size: 1.5rem;
+        font-family: "Times New Roman", serif;
+        font-style: italic;
+        color: #00d3ca; }
+    .block-testimonios .content-testimonios-text h4 {
+      text-align: right;
+      color: #00d3ca; }
+    .block-testimonios .content-testimonios-text span {
+      display: block;
+      text-align: right;
+      font-style: italic;
+      font-size: .8rem;
+      color: white; }
+
+@keyframes desplaza {
+  from {
+    transform: translateX(-200px);
+    transition: all .3s; } }
+/*=====  End of ESTILOS HOME PAGE  ======*/

@@ -1,0 +1,32 @@
+/*======================================
+=            ESTILOS FOOTER            =
+======================================*/
+
+footer {
+	background: $color-primario;
+	padding: 4rem 0; 
+	position: relative;
+	.footer-content {
+
+		&-text {
+			padding: 2rem;
+			text-align: right;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-logo {
+			grid-area: logo;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 232px;
+				height: 138px;
+			}
+		}
+	}
+
+}
+
+/*=====  End of ESTILOS FOOTER  ======*/

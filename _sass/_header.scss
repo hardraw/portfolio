@@ -1,0 +1,29 @@
+/*======================================
+=            ESTILOS HEADER            =
+======================================*/
+
+header {
+	width: 100%;
+	position: fixed;
+	z-index: 20;
+	background: rgba(darken($color-primario, 10%), .5);
+	display: grid;
+	grid-template-columns: 100px 50%;
+	grid-template-areas: "logo navigation";
+	justify-content: space-between;
+}
+
+
+.block-logo {
+	grid-area: logo;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 4rem;
+	img {
+		width: 25px;
+		height: 40px;
+	}
+}
+
+/*=====  End of ESTILOS HEADER  ======*/

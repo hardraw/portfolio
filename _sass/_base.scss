@@ -1,0 +1,21 @@
+*,html, body  {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $color-primario;
+	color: $color-secundario;
+	font-family: $font-parrafos;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.row {
+	max-width: 1000px;
+	margin: auto;
+}
