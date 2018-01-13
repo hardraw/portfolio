@@ -1,12 +1,7 @@
 markdown: redcarpet
-baseurl: "/portfolio"
-siteurl:  "/portfolio"
+sieurl:  localhost:4000
 exclude: ['README.md']
 
 sass:
       sass_dir: _sass
       style: nested
-
-url:  "/portfolio"
-livereload: true
-reload_port: 4001
