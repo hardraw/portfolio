@@ -1,5 +1,5 @@
 markdown: redcarpet
-sieurl:  /portfolio
+baseurl:  /portfolio
 exclude: ['README.md']
 
 sass:
