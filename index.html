@@ -12,106 +12,14 @@ layout: default
 		</div>		
 	</header>
 
-	<div class="block-proyectos">
-		<H1 class="title-block-home">ÚLTIMOS PROYECTOS</H1>
-		<div class="text-rotate">
-			PROYECTOS
-		</div>
-		<div class="slider-proyectos">
+	{% include home_page/block_proyectos2.html %}
 
+	{% include home_page/block_servicios.html %}
 
-			<!-- slider1 -->			
-			<div class="block-proyectos-single" data-tilt data-tilt-scale="1" data-tilt-perspective="2000">
-				<div class="block-proyecto-image">
-					<img src="{{site.url}}/img/slide1.jpg" alt="">
-				</div>
-				<div class="block-proyecto-categoria">
-						branding
-				</div>
-				<div class="block-proyecto-titulo">
-						Fonsegar
-				</div>
-				<div class="block-proyecto-resumen">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, obcaecati.
-				</div>
-				<div class="block-proyecto-link">
-						<a href="" class="button-round">ver mas</a>			
-				</div>
-			</div>
-			<!-- slider1 fin -->
+	{% include home_page/block_testimonios.html %}
 
+	
 
-			<!-- slider1 -->			
-			<div class="block-proyectos-single" data-tilt data-tilt-scale="1" data-tilt-perspective="2000">
-				<div class="block-proyecto-image">
-					<img src="{{site.url}}/img/slide1.jpg" alt="">
-				</div>
-				<div class="block-proyecto-categoria">
-						branding
-				</div>
-				<div class="block-proyecto-titulo">
-						Fonsegar
-				</div>
-				<div class="block-proyecto-resumen">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, obcaecati.
-				</div>
-				<div class="block-proyecto-link">
-						<a href="" class="button-round">ver mas</a>			
-				</div>
-			</div>
-			<!-- slider1 fin -->
+	{% include footer.html %}
 
-		</div>
-		
-	</div>
-
-	<div class="block-servicios">
-		<H1 class="title-block-home">SERVICIOS</H1>
-		<div class="text-rotate">
-			SERVICIOS
-		</div>
-		<div class="row">
-			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
-			</div>
-			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
-			</div>
-			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
-			</div>
-		</div>
-	</div>
-
-	<div class="block-testimonios">
-		<H1 class="title-block-home">TESTIMONIOS</H1>
-		<div class="text-rotate">
-			TESTIMONIOS
-		</div>
-		<div class="content-testimonios">
-			<div class="content-testimonios-image">
-				<img src="http://placehold.it/200x200/fff/000" alt="">
-			</div>
-			<div class="content-testimonios-text">
-				<blockquote>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, beatae.
-				</blockquote>
-				<h4>Fidel Nvajas</h4>
-				<span>Director ejecutivo - CEO</span>
-			</div>
-		</div>
-	</div>
-
-	<footer>
-		<div class="footer-content">
-			<div class="footer-content-text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
-			</div>
-			<div class="footer-content-logo">
-				<img src="{{site.url}}/img/logo-hero.svg" alt="">
-			</div>
-		</div>
-	</footer>
+	
