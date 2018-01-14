@@ -1,0 +1,56 @@
+.page-title {
+	background: radial-gradient(circle farthest-corner at 50vw 80vh, $color-secundario, $color-primario 80%);
+	padding-top: 6rem;
+	padding-bottom: 2rem;
+
+	h1 {
+		width: 90%;
+		margin: auto;
+		text-align: center;
+		color: white;
+		font-size: 2rem;
+		font-family: $font-titulos;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		
+	}
+}
+
+main {
+	@extend .row;
+
+	color: #665;
+	.excerpt-page {
+		max-width: 650px;
+		margin: auto;
+		padding: 4rem 0;;
+		text-align: center;
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 100px;
+			height: 5px;
+			background: $color-secundario;
+			position: absolute;
+			bottom: 0;
+			border-radius: 5px;
+			margin: auto;
+			left: 0;
+			right: 0;
+
+		}
+	}
+}
+
+
+@media screen and (min-width: 40em) {
+	.page-title {
+		padding-top: 10rem;
+		padding-bottom: 1rem;
+		h1 {
+			font-size: 3.2rem;
+			letter-spacing: 3px;
+		}
+	}
+}

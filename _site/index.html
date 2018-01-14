@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>My Portafolio</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Muli:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="/portfolio/css/styles.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/styles.css">
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
@@ -20,10 +20,10 @@
 		</div>
 				<nav class="main-menu">
 			<ul>
-				<li><a href="http://localhost:4000/portafolio.html">portafolio</a></li>
-				<li><a href="http://localhost:4000/about.html">sobre mí</a></li>
-				<li><a href="http://localhost:4000/servicios.html">Servicios</a></li>
-				<li><a href="http://localhost:4000/contactenos.html">contacto</a></li>
+				<li><a href="http://localhost:4000/portafolio.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_briefcase.svg" alt=""></span><span class="text-nav">portafolio</span></a></li>
+				<li><a href="http://localhost:4000/about.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_user.svg" alt=""></span><span class="text-nav">sobre mí</span></a></li>
+				<li><a href="http://localhost:4000/servicios.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_cup-designer.svg" alt=""></span><span class="text-nav">servicios</span></a></li>
+				<li><a href="http://localhost:4000/contactenos.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_mail.svg" alt=""></span><span class="text-nav">contacto</span></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -39,46 +39,50 @@
 	</header>
 
 	<div class="block-proyectos">
-	<H1 class="title-block-home">SERVICIOS</H1>
+	<H1 class="title-block-home">PROYECTOS</H1>
 	<div class="text-rotate">
-		SERVICIOS
+		PROYECTOS
 	</div>
 	<div class="cd-slider">
 	    <ul>
 	      <li>
 	        <div class="image" style="background-image:url(http://localhost:4000/img/slide1.jpg);"></div>
 	        <div class="content">
-	          <h3>Jackets Collection 2017</h3>
-	          <a href="#">View Gallery</a>
+	        	<div class="category">BRANDING</div>
+	         	<h3>Branding San Nicolás</h3>
+	         	<a href="#">ver más</a>
 	        </div>
 	      </li>
 	      <li>
 	        <div class="image" style="background-image:url(https://images.unsplash.com/uploads/1411724908903377d4696/2e9b0cb2?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);"></div>
 	        <div class="content">
-	          <h3>Accessories</h3>
-	          <a href="#">View Gallery</a>
+	        	<div class="category">web</div>
+	         	<h3>Site Hogar Santa Sofia</h3>
+	         	<a href="#">ver más</a>
 	        </div>
 	      </li>
 	      <li>
 	        <div class="image" style="background-image:url(https://images.unsplash.com/photo-1416838375725-e834a83f62b7?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);"></div>
 	        <div class="content">
 	        	<div class="category">categoria</div>
-	         	<h3>Winter Shoes</h3>
-	         	<a href="#">View Gallery</a>
+	         	<h3>Site Dasha sas</h3>
+	         	<a href="#">ver más</a>
 	        </div>
 	      </li>
 	      <li>
 	        <div class="image" style="background-image:url(https://images.unsplash.com/35/JOd4DPGLThifgf38Lpgj_IMG.jpg?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);"></div>
 	        <div class="content">
-	          <h3>Winter Collection 2017</h3>
-	          <a href="#">View Gallery</a>
+	        	<div class="category">web</div>
+	         	<h3>Site Los Nogales</h3>
+	         	<a href="#">ver más</a>
 	        </div>
 	      </li>
 	      <li>
 	        <div class="image" style="background-image:url(https://images.unsplash.com/photo-1453974336165-b5c58464f1ed?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);"></div>
 	        <div class="content">
-	          <h3>Summer Collection</h3>
-	          <a href="#">View Gallery</a>
+	        	<div class="category">Print</div>
+	         	<h3>Flyer Sicampo</h3>
+	         	<a href="#">ver más</a>
 	        </div>
 	      </li>      
 	    </ul>
@@ -94,18 +98,27 @@
 		<div class="text-rotate">
 			SERVICIOS
 		</div>
-		<div class="row">
+		<div class="block-servicios--items">
 			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
+				<a href="">
+					<img src="http://localhost:4000/img/icon_web.svg" alt="">
+					<h2>Diseño Web</h2>
+				</a>
+				
 			</div>
 			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
+				<a href="">
+					<img src="http://localhost:4000/img/icon_grafico.svg" alt="">
+					<h2>Diseño Gráfico</h2>
+				</a>
+				
 			</div>
 			<div class="item-servicio">
-				<img src="" alt="">
-				<h2>Diseño</h2>
+				<a href="">
+					<img src="http://localhost:4000/img/icon_impresion.svg" alt="">
+					<h2>Impresión</h2>
+				</a>
+				
 			</div>
 		</div>
 	</div>
@@ -147,15 +160,40 @@
 		</div>
 	</footer>
 
-	
 
-
-
- 	<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
- 	<script src="http://localhost:4000/js/slider.js"></script>
- 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+<!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
+	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+	 	<script src="http://localhost:4000/js/slider.js"></script>
+	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
 
 	
-</body>
+	</body>
 </html>
+
+	
+
+
+
+	<footer>
+		<div class="footer-content">
+			<div class="footer-content-text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
+			</div>
+			<div class="footer-content-logo">
+				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
+			</div>
+		</div>
+	</footer>
+
+
+<!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
+	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+	 	<script src="http://localhost:4000/js/slider.js"></script>
+	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+
+	
+	</body>
+</html>
+
+
+ 	

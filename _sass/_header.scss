@@ -5,25 +5,52 @@
 header {
 	width: 100%;
 	position: fixed;
-	z-index: 20;
-	background: rgba(darken($color-primario, 10%), .5);
+	z-index: 30;
+	background: rgba(darken($color-primario, 10%), .8);
 	display: grid;
-	grid-template-columns: 100px 50%;
-	grid-template-areas: "logo navigation";
+	grid-template-columns: 1fr;
+	grid-template-areas: "navigation";
 	justify-content: space-between;
 }
 
 
+
+
+
 .block-logo {
 	grid-area: logo;
-	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	padding-left: 4rem;
+	display: none;
+
 	img {
-		width: 25px;
-		height: 40px;
-	}
+			width: 25px;
+			height: 40px;
+		}
+
 }
 
+
+
+
+@media screen and ( min-width: 40em ) {
+
+	header {
+		grid-template-columns: 100px 70%;
+		grid-template-areas: "logo navigation";
+	}
+
+	.block-logo {
+		display: flex;
+	}
+
+
+}
+
+@media screen and ( min-width: 64em ) {
+	header {
+		grid-template-columns: 100px 50%;
+	}
+}
 /*=====  End of ESTILOS HEADER  ======*/

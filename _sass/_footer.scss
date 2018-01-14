@@ -1,9 +1,12 @@
-/*======================================
+   /*======================================
 =            ESTILOS FOOTER            =
 ======================================*/
 
 footer {
-	background: $color-primario;
+	background: $color-primario url('../img/decoration-mark.svg');
+	background-repeat: no-repeat;
+	background-size: inherit;
+	background-position: top left;
 	padding: 4rem 0; 
 	position: relative;
 	.footer-content {

@@ -10,22 +10,26 @@
   box-sizing: border-box; }
 
 body {
-  background: #1B1D3F;
+  background: #F8F8F8;
   color: #00A099;
   font-family: "Muli", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.5; }
 
 a {
   text-decoration: none; }
 
-.row, .cd-slider {
-  max-width: 1000px;
-  margin: auto; }
+.row, .block-servicios--items, main, .cd-slider {
+  max-width: 100%; }
 
+@media screen and (min-width: 40em) {
+  .row, .block-servicios--items, main, .cd-slider {
+    max-width: 1000px;
+    margin: auto; } }
 /*=======================================
 =            ESTILOS BOTONES            =
 =======================================*/
-.button-round, .home-hero-links a, .cd-slider li.current .content a {
+.button-round, .home-hero-links a, .cd-slider li.current .content a, .content a {
   padding: 1rem 2rem;
   background: #00A099;
   color: white;
@@ -37,7 +41,7 @@ a {
   transition: all .3s;
   text-transform: uppercase;
   display: inline-block; }
-  .button-round:hover, .home-hero-links a:hover, .cd-slider li.current .content a:hover {
+  .button-round:hover, .home-hero-links a:hover, .cd-slider li.current .content a:hover, .content a:hover {
     background: #00d3ca;
     transition: all .3s; }
 
@@ -48,29 +52,42 @@ a {
 header {
   width: 100%;
   position: fixed;
-  z-index: 20;
-  background: rgba(12, 13, 27, 0.5);
+  z-index: 30;
+  background: rgba(12, 13, 27, 0.8);
   display: grid;
-  grid-template-columns: 100px 50%;
-  grid-template-areas: "logo navigation";
+  grid-template-columns: 1fr;
+  grid-template-areas: "navigation";
   justify-content: space-between; }
 
 .block-logo {
   grid-area: logo;
-  display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 4rem; }
+  padding-left: 4rem;
+  display: none; }
   .block-logo img {
     width: 25px;
     height: 40px; }
 
+@media screen and (min-width: 40em) {
+  header {
+    grid-template-columns: 100px 70%;
+    grid-template-areas: "logo navigation"; }
+
+  .block-logo {
+    display: flex; } }
+@media screen and (min-width: 64em) {
+  header {
+    grid-template-columns: 100px 50%; } }
 /*=====  End of ESTILOS HEADER  ======*/
-/*======================================
+   /*======================================
 =            ESTILOS FOOTER            =
 ======================================*/
 footer {
-  background: #1B1D3F;
+  background: #1B1D3F url("../img/decoration-mark.svg");
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: top left;
   padding: 4rem 0;
   position: relative; }
   footer .footer-content-text {
@@ -99,6 +116,16 @@ footer {
   color: white;
   grid-area: navigation;
   border-left: 1px solid rgba(0, 160, 153, 0.6); }
+  .main-menu .text-nav {
+    display: none; }
+  .main-menu .icon-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main-menu .icon-nav img {
+      width: 30px; }
   .main-menu ul {
     display: flex; }
     .main-menu ul li {
@@ -114,17 +141,24 @@ footer {
         font-family: "Muli", sans-serif;
         color: white;
         letter-spacing: 1px;
-        padding: 2rem 0; }
+        padding: 1rem 0; }
         .main-menu ul li a:hover {
           background: #1d1f43; }
 
+@media screen and (min-width: 40em) {
+  .main-menu .icon-nav {
+    display: none; }
+  .main-menu .text-nav {
+    display: block; }
+  .main-menu ul li a {
+    padding: 2rem 0; } }
 /*=====  End of ESTILOS MENÚ PRINCIPAL  ======*/
 /*=========================================
 =            ESTILOS HOME PAGE            =
 =========================================*/
 /* Estilos bloques */
 .block-proyectos, .block-servicios, .block-testimonios {
-  padding: 6rem 4rem;
+  padding: 6rem 1rem;
   min-height: 100vh;
   position: relative;
   max-width: 100vw; }
@@ -153,7 +187,8 @@ footer {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 5px;
-  margin-bottom: 4rem; }
+  margin-bottom: 3rem;
+  font-size: 1.5rem; }
 
 .text-rotate {
   transform: rotate(270deg);
@@ -165,9 +200,23 @@ footer {
   line-height: 0;
   font-family: "Muli", sans-serif;
   writing-mode: lr-tb;
-  display: inline-block;
+  display: none;
   bottom: 30vh; }
 
+@media screen and (min-width: 40em) {
+  .text-rotate {
+    display: inline-block; }
+
+  .block-proyectos, .block-servicios, .block-testimonios {
+    padding: 6rem 4rem;
+    min-height: 100vh;
+    position: relative;
+    max-width: 100vw; }
+
+  .title-block-home {
+    letter-spacing: 5px;
+    margin-bottom: 4rem;
+    font-size: 3rem; } }
 .home-hero {
   background: radial-gradient(circle farthest-corner at 50vw 150vh, #00A099, #1B1D3F 80%);
   max-width: 100vw;
@@ -180,14 +229,16 @@ footer {
   position: relative;
   z-index: 10; }
   .home-hero img {
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    max-width: 300px; }
   .home-hero-links {
     display: flex; }
     .home-hero-links a {
       text-align: center;
       display: block;
-      width: 170px;
-      margin: 1rem; }
+      width: 150px;
+      padding: 1rem 1rem;
+      margin: .3rem; }
   .home-hero:after {
     content: "";
     position: absolute;
@@ -267,61 +318,164 @@ footer {
 
 .block-servicios {
   background: #F8F8F8; }
+  .block-servicios--items {
+    display: grid; }
+    .block-servicios--items .item-servicio a img {
+      width: 180px;
+      display: block;
+      margin: auto;
+      padding-bottom: 2rem;
+      transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .block-servicios--items .item-servicio a h2 {
+      margin-bottom: 8rem;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      position: relative;
+      color: #00A099; }
+      .block-servicios--items .item-servicio a h2:before {
+        content: "";
+        width: 20vw;
+        height: 5px;
+        border-radius: 5px;
+        background: #00A099;
+        position: absolute;
+        bottom: -1rem;
+        margin: auto;
+        left: 0;
+        right: 0;
+        transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .block-testimonios {
   background: radial-gradient(circle farthest-corner at 50vw 150vh, #00A099, #1B1D3F 80%); }
   .block-testimonios .content-testimonios {
-    max-width: 60vw;
+    width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "foto text";
-    grid-gap: 4rem;
+    grid-template-areas: "foto" "texto";
+    grid-gap: 0rem;
     align-items: center; }
     .block-testimonios .content-testimonios-image {
       grid-area: foto; }
       .block-testimonios .content-testimonios-image img {
+        display: block;
+        margin: auto;
         border-radius: 100%;
+        box-shadow: 0 10px 90px 10px rgba(0, 0, 0, 0.3);
         border: 2px solid #1B1D3F; }
-    .block-testimonios .content-testimonios-text blockquote {
-      font-style: italic;
-      font-size: 1.5rem;
-      color: white;
-      margin-bottom: 1.5rem;
-      position: relative; }
-      .block-testimonios .content-testimonios-text blockquote:after {
-        content: '"';
-        font-family: "Times New Roman", serif;
-        font-size: 1.5rem;
-        color: #00d3ca; }
-      .block-testimonios .content-testimonios-text blockquote:before {
-        content: '"';
-        position: absolute;
-        left: -1rem;
-        font-size: 1.5rem;
-        font-family: "Times New Roman", serif;
+    .block-testimonios .content-testimonios-text {
+      margin-top: 3rem; }
+      .block-testimonios .content-testimonios-text blockquote {
         font-style: italic;
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 1.5rem;
+        position: relative; }
+        .block-testimonios .content-testimonios-text blockquote:after {
+          content: '"';
+          font-family: "Times New Roman", serif;
+          font-size: 1.5rem;
+          color: #00d3ca; }
+        .block-testimonios .content-testimonios-text blockquote:before {
+          content: '"';
+          position: absolute;
+          left: -1rem;
+          font-size: 1.5rem;
+          font-family: "Times New Roman", serif;
+          font-style: italic;
+          color: #00d3ca; }
+      .block-testimonios .content-testimonios-text h4 {
+        text-align: right;
         color: #00d3ca; }
-    .block-testimonios .content-testimonios-text h4 {
-      text-align: right;
-      color: #00d3ca; }
-    .block-testimonios .content-testimonios-text span {
-      display: block;
-      text-align: right;
-      font-style: italic;
-      font-size: .8rem;
-      color: white; }
+      .block-testimonios .content-testimonios-text span {
+        display: block;
+        text-align: right;
+        font-style: italic;
+        font-size: .8rem;
+        color: white; }
 
+@media screen and (min-width: 40em) {
+  .block-testimonios .content-testimonios {
+    padding-top: 4rem;
+    width: 60vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "foto text";
+    grid-gap: 1.5rem;
+    align-items: center; }
+    .block-testimonios .content-testimonios--text {
+      margin-top: 0rem; }
+
+  .home-hero img {
+    width: 400px; }
+  .home-hero a {
+    width: 170px;
+    margin: 1rem; }
+
+  .block-servicios--items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem; }
+    .block-servicios--items .item-servicio a img {
+      width: 150px; }
+    .block-servicios--items .item-servicio a h2:before {
+      width: 7vw; }
+    .block-servicios--items .item-servicio a:hover img {
+      transform: translateY(-30px);
+      transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .block-servicios--items .item-servicio a:hover h2::before {
+      width: 10vw; } }
+@media screen and (min-width: 64em) {
+  .block-servicios a--items .item-servicio a img {
+    width: 180px; } }
 @keyframes desplaza {
   from {
     transform: translateX(-200px);
     transition: all .3s; } }
 /*=====  End of ESTILOS HOME PAGE  ======*/
+.page-title {
+  background: radial-gradient(circle farthest-corner at 50vw 80vh, #00A099, #1B1D3F 80%);
+  padding-top: 6rem;
+  padding-bottom: 2rem; }
+  .page-title h1 {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+main {
+  color: #665; }
+  main .excerpt-page {
+    max-width: 650px;
+    margin: auto;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative; }
+    main .excerpt-page:before {
+      content: "";
+      width: 100px;
+      height: 5px;
+      background: #00A099;
+      position: absolute;
+      bottom: 0;
+      border-radius: 5px;
+      margin: auto;
+      left: 0;
+      right: 0; }
+
+@media screen and (min-width: 40em) {
+  .page-title {
+    padding-top: 10rem;
+    padding-bottom: 1rem; }
+    .page-title h1 {
+      font-size: 3.2rem;
+      letter-spacing: 3px; } }
 /* Slider Style
 --------------------------------------*/
 .cd-slider {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
   margin-bottom: 8rem;
   /* Current Slide 
@@ -344,12 +498,19 @@ footer {
     opacity: 1;
     -webkit-transition-delay: 1.1s;
     transition-delay: 1.1s; }
+  .cd-slider li.current .content .category {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transition-delay: 1.1s;
+    transition-delay: 1.1s; }
   .cd-slider li.prev_slide .image {
     clip: rect(0, 0, 50rem, 0); }
   .cd-slider nav {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    right: 1.5rem;
+    bottom: 0rem;
+    margin: auto;
     color: #00d3ca;
     z-index: 2; }
 
@@ -377,19 +538,16 @@ footer {
   will-change: clip; }
 
 .content {
-  top: 0;
-  right: 0;
   width: 100%;
-  height: 100%;
-  padding: 0rem 0 0 rem;
-  font-size: 9rem;
-  text-align: right; }
+  padding: 0rem 0 0rem;
+  text-align: right;
+  line-height: 1; }
 
 .content h3 {
   color: white;
   font-family: "Josefin Sans", sans-serif;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  font-size: 8rem;
+  font-size: 2.5rem;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-transform: translateY(-30%);
@@ -403,9 +561,7 @@ footer {
 
 .content a {
   display: inline-block;
-  font-size: 2rem;
-  text-transform: lowercase;
-  padding: 1.5rem;
+  margin-top: 1.5rem;
   opacity: 0;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -420,7 +576,15 @@ footer {
   color: white;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding-bottom: 5rem; }
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+  transition: opacity .5s .1s, -webkit-transform .5s .1s;
+  transition: transform .5s .1s, opacity .5s .1s;
+  transition: transform .5s .1s, opacity .5s .1s, -webkit-transform .5s .1s;
+  will-change: transform, opacity; }
 
 /* Prev Slide 
 ------------------------------------*/
@@ -461,20 +625,22 @@ footer {
   content: ">";
   right: 20px;
   color: white;
-  left: 1rem;
+  left: rem;
   top: 10px;
   font-size: 3rem;
   font-weight: 100; }
 
 .counter {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: "Muli", sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  width: 20vw;
+  text-align: center; }
 
 .counter span:last-child::before {
   content: '/';
-  margin: 0 1rem; }
+  margin: 0 1.5rem; }
 
 .prev:hover::after {
   transform: translateX(-10px); }
@@ -485,13 +651,32 @@ footer {
 button:focus {
   outline: 0; }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 40em) {
+  .cd-slider {
+    height: 75vh; }
+
   .image {
-    width: 100%; }
+    width: 40vw;
+    height: 75vh;
+    position: absolute; }
 
   .content {
-    padding-right: 2rem; }
+    position: absolute;
+    padding-right: 2rem;
+    height: 75vh;
+    font-size: 3rem; }
+    .content a {
+      margin-top: 0; }
+    .content h3 {
+      margin-top: 1.5rem;
+      font-size: 8rem; }
+    .content .category {
+      font-size: 1rem;
+      letter-spacing: 5px; }
 
   nav {
-    left: 0;
-    right: auto; } }
+    right: 0; }
+
+  .counter {
+    font-size: 3rem;
+    width: 12vh; } }

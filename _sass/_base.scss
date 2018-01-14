@@ -5,10 +5,11 @@
 }
 
 body {
-	background: $color-primario;
+	background: $light-gray;
 	color: $color-secundario;
 	font-family: $font-parrafos;
 	font-size: 16px;
+	line-height: 1.5;
 }
 
 a {
@@ -17,6 +18,13 @@ a {
 
 
 .row {
-	max-width: 1000px;
-	margin: auto;
+	max-width: 100%;
+}
+
+
+@media screen and (min-width: 40em) {
+	.row {
+		max-width: 1000px;
+		margin: auto;
+	}
 }
