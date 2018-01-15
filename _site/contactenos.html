@@ -37,20 +37,36 @@
 			Para nosotros es un gusto poder ayudar en lo que mas podamos.
 		</div>
 
+
+		<section class="content-page">
+				<div class="container-form">
+		<div class="text-help">
+			¿En qué puedo ayudarte?
+		</div>
+		<div class="contact-form">
 			<form id="contactform"  method="POST">
-	    <input type="text" name="name" placeholder="Your name">
-	    <input type="email" name="_replyto" placeholder="Your email">
-	    <input type="hidden" name="_subject" value="Website contact" />
-	    <textarea name="message" placeholder="Your message"></textarea>
-	    <input type="text" name="_gotcha" style="display:none" />
-	    <input type="submit" value="Send">
-	    <input type="hidden" name="_next" value="localhost:4000/index.html" />
-	</form>
+			    <input type="text" name="name" placeholder="Tu Nombre">
+			    <input type="email" name="_replyto" placeholder="Tu E-mail">
+			    <input type="phone" name="_phone" placeholder="Tu teléfono">
+			    <input type="hidden" name="_subject" value="Website contact" />
+			    <textarea name="message" placeholder="Mensaje"></textarea>
+			    <input type="text" name="_gotcha" style="display:none" />
+			    <input type="submit" value="enviar">
+			    <input type="hidden" name="_next" value="localhost:4000/index.html" />
+			</form>
+		</div>
+	</div>
+
+
+	
 <script>
     var contactform =  document.getElementById('contactform');
     contactform.setAttribute('action', '//formspree.io/' + 'hola' + '@' + 'harbyrobayo' + '.' + 'com');
 </script>
 
+		</section>
+
+		
 	</main>
 
  	
@@ -61,6 +77,16 @@
 			<div class="footer-content-text">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
 			</div>
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 			<div class="footer-content-logo">
 				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
 			</div>
@@ -71,11 +97,23 @@
 <!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 	 	<script src="http://localhost:4000/js/slider.js"></script>
-	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+
+
+	 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js">
+	 		
+	 		</script>
+
+	 		<script>
+	 			var mixer = mixitup('.content-portfolio');
+	 			var mixer = mixitup(containerEl);
+	 		</script>
+
 
 	
 	</body>
 </html>
+
+
 
 
  	

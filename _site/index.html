@@ -28,7 +28,7 @@
 		</nav>
 	</header>
 
- 		<header class="home-hero">
+ 		<div class="home-hero">
 		<div class="content-hero">
 			<img src="http://localhost:4000/img/logo-hero.svg" alt="">
 			<div class="home-hero-links">
@@ -36,7 +36,7 @@
 				<a href="http://localhost:4000/suscripcion">Suscribirme</a>
 			</div>
 		</div>		
-	</header>
+	</div>
 
 	<div class="block-proyectos">
 	<H1 class="title-block-home">PROYECTOS</H1>
@@ -149,27 +149,6 @@
 
 	
 
-		<footer>
-		<div class="footer-content">
-			<div class="footer-content-text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
-			</div>
-			<div class="footer-content-logo">
-				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
-			</div>
-		</div>
-	</footer>
-
-
-<!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
-	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
-	 	<script src="http://localhost:4000/js/slider.js"></script>
-	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
-
-	
-	</body>
-</html>
-
 	
 
 
@@ -179,6 +158,16 @@
 			<div class="footer-content-text">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
 			</div>
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 			<div class="footer-content-logo">
 				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
 			</div>
@@ -189,11 +178,23 @@
 <!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 	 	<script src="http://localhost:4000/js/slider.js"></script>
-	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+
+
+	 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js">
+	 		
+	 		</script>
+
+	 		<script>
+	 			var mixer = mixitup('.content-portfolio');
+	 			var mixer = mixitup(containerEl);
+	 		</script>
+
 
 	
 	</body>
 </html>
+
+
 
 
  	

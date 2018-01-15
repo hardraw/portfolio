@@ -3,6 +3,7 @@
 			<div class="footer-content-text">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
 			</div>
+			{% include like_facebook.html %}
 			<div class="footer-content-logo">
 				<img src="{{site.url}}/img/logo-hero.svg" alt="">
 			</div>
@@ -13,8 +14,19 @@
 <!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 	 	<script src="{{site.url}}/js/slider.js"></script>
-	 	<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>
+
+
+	 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js">
+	 		
+	 		</script>
+
+	 		<script>
+	 			var mixer = mixitup('.content-portfolio');
+	 			var mixer = mixitup(containerEl);
+	 		</script>
+
 
 	
 	</body>
 </html>
+

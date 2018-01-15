@@ -21,10 +21,22 @@ a {
 	max-width: 100%;
 }
 
+main {
+	.content-page {
+		padding: 4rem 1rem;
+	}
+}
+
 
 @media screen and (min-width: 40em) {
 	.row {
 		max-width: 1000px;
 		margin: auto;
+	}
+
+	main {
+		.content-page {
+			padding: 4rem 0;
+		}
 	}
 }

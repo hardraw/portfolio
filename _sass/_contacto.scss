@@ -1,0 +1,47 @@
+/*================================================
+=            ESTILOS HOJA DE CONTACTO            =
+================================================*/
+
+.container-form {
+	display: grid;
+	.text-help {
+		font-size: 3rem;
+		color: $color-primario;
+		text-align: right;
+		margin-bottom: 2rem;
+		padding: 0 2rem;
+		display: flex;
+		align-items: center;
+
+	}
+
+	.contact-form {
+		background: white;
+		padding: 4rem 3rem;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 10px 0px rbga(0,0,0,.9);
+
+		input {
+			margin-bottom: 2rem;
+		}
+
+		input[type="submit"] {
+			@extend .button-round;
+			margin-top: 2rem;
+			vertical-align: center;
+			display: block;
+			margin: auto;
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+	}
+}
+
+@media screen and (min-width: 40em) {
+	.container-form {
+		grid-template-columns: auto 500px;
+	}
+}
+
+
+/*=====  End of ESTILOS HOJA DE CONTACTO  ======*/

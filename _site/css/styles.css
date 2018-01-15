@@ -22,14 +22,20 @@ a {
 .row, .block-servicios--items, main, .cd-slider {
   max-width: 100%; }
 
+main .content-page {
+  padding: 4rem 1rem; }
+
 @media screen and (min-width: 40em) {
   .row, .block-servicios--items, main, .cd-slider {
     max-width: 1000px;
-    margin: auto; } }
+    margin: auto; }
+
+  main .content-page {
+    padding: 4rem 0; } }
 /*=======================================
 =            ESTILOS BOTONES            =
 =======================================*/
-.button-round, .home-hero-links a, .cd-slider li.current .content a, .content a {
+.button-round, .home-hero-links a, .container-form .contact-form input[type="submit"], .cd-slider li.current .content a, .content a {
   padding: 1rem 2rem;
   background: #00A099;
   color: white;
@@ -40,12 +46,31 @@ a {
   border-radius: 30px;
   transition: all .3s;
   text-transform: uppercase;
-  display: inline-block; }
-  .button-round:hover, .home-hero-links a:hover, .cd-slider li.current .content a:hover, .content a:hover {
+  display: inline-block;
+  cursor: pointer; }
+  .button-round:hover, .home-hero-links a:hover, .container-form .contact-form input[type="submit"]:hover, .cd-slider li.current .content a:hover, .content a:hover {
     background: #00d3ca;
     transition: all .3s; }
 
 /*=====  End of ESTILOS BOTONES  ======*/
+/*===========================================
+=            ESTILOS FORMULARIOS            =
+===========================================*/
+input[type="text"], input[type="email"], input[type="phone"], input[type="number"], textarea {
+  color: rgba(27, 29, 63, 0.5);
+  width: 100%;
+  font-size: .9rem;
+  font-family: "Muli", sans-serif;
+  padding: .8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #F8F8F8; }
+
+textarea {
+  width: 100%; }
+
+/*=====  End of ESTILOS FORMULARIOS  ======*/
 /*======================================
 =            ESTILOS HEADER            =
 ======================================*/
@@ -471,6 +496,59 @@ main {
     .page-title h1 {
       font-size: 3.2rem;
       letter-spacing: 3px; } }
+.container-portfolio .content-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem; }
+  .container-portfolio .content-portfolio .item-portafolio {
+    display: flex; }
+    .container-portfolio .content-portfolio .item-portafolio.small {
+      grid-column: span;
+      grid-row: span; }
+    .container-portfolio .content-portfolio .item-portafolio.landscape {
+      grid-column: span 2;
+      grid-row: span; }
+    .container-portfolio .content-portfolio .item-portafolio.vertical {
+      grid-column: span;
+      grid-row: span 2; }
+  .container-portfolio .content-portfolio img {
+    width: 100%;
+    display: block;
+    object-fit: cover; }
+
+/*================================================
+=            ESTILOS HOJA DE CONTACTO            =
+================================================*/
+.container-form {
+  display: grid; }
+  .container-form .text-help {
+    font-size: 3rem;
+    color: #1B1D3F;
+    text-align: right;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center; }
+  .container-form .contact-form {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 10px 0px rbga(0, 0, 0, 0.9); }
+    .container-form .contact-form input {
+      margin-bottom: 2rem; }
+    .container-form .contact-form input[type="submit"] {
+      margin-top: 2rem;
+      vertical-align: center;
+      display: block;
+      margin: auto;
+      padding-left: 4rem;
+      padding-right: 4rem; }
+
+@media screen and (min-width: 40em) {
+  .container-form {
+    grid-template-columns: auto 500px; } }
+/*=====  End of ESTILOS HOJA DE CONTACTO  ======*/
 /* Slider Style
 --------------------------------------*/
 .cd-slider {
@@ -508,10 +586,8 @@ main {
     clip: rect(0, 0, 50rem, 0); }
   .cd-slider nav {
     position: absolute;
-    right: 1.5rem;
-    bottom: 0rem;
-    margin: auto;
-    color: #00d3ca;
+    bottom: 0;
+    right: 0;
     z-index: 2; }
 
 .cd-slider li {
@@ -595,8 +671,8 @@ main {
   position: relative;
   display: inline-block;
   height: 5rem;
-  width: 4rem;
-  border: none;
+  width: 5rem;
+  border: 0;
   cursor: pointer;
   background: transparent;
   transition: all .3s; }
@@ -607,9 +683,11 @@ main {
   top: 50%;
   left: 3rem;
   width: 0;
-  height: 0; }
+  height: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
-.prev::after {
+.prev::after, .next::after {
   content: '<';
   font-size: 3rem;
   font-weight: 100;
@@ -619,13 +697,15 @@ main {
   left: 20px;
   height: .1rem;
   min-height: 1px;
-  transition: all .3s; }
+  transition: all .3s;
+  -webkit-transform: translateY(-50%) translateZ(0);
+  transform: translateY(-50%) translateZ(0); }
 
 .next::before {
   content: ">";
   right: 20px;
   color: white;
-  left: rem;
+  left: auto;
   top: 10px;
   font-size: 3rem;
   font-weight: 100; }
@@ -635,18 +715,14 @@ main {
   font-size: 2rem;
   font-family: "Muli", sans-serif;
   font-weight: 300;
-  width: 20vw;
-  text-align: center; }
+  width: 20vw; }
 
 .counter span:last-child::before {
   content: '/';
-  margin: 0 1.5rem; }
+  margin: 0 1rem; }
 
 .prev:hover::after {
   transform: translateX(-10px); }
-
-.next:hover {
-  transform: translateX(10px); }
 
 button:focus {
   outline: 0; }

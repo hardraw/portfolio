@@ -1,0 +1,25 @@
+/*===========================================
+=            ESTILOS FORMULARIOS            =
+===========================================*/
+
+
+input[type="text"], input[type="email"], input[type="phone"], input[type="number"], , textarea {
+	color: rgba($color-primario, .5);
+	width: 100%;
+	font-size: .9rem;
+	font-family: $font-parrafos;
+	padding: .8rem;
+	margin-bottom: 1rem;
+	border: $border-input;
+	border-radius: $border-radius-input;
+	background: $bg-input;
+	
+}
+
+
+textarea {
+	width: 100%;
+}
+
+
+/*=====  End of ESTILOS FORMULARIOS  ======*/
