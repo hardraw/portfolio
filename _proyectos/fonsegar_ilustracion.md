@@ -1,5 +1,5 @@
 ---
-titulo:				fonsegar
+titulo:				Ilustración fonsegar
 descripcion:		Impresión de volantes con la nueva marca de la empresa.
 orden_proyecto: 	3
 imagen_proyecto:	/img/slide1.jpg

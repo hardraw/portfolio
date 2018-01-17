@@ -1,6 +1,6 @@
 ---
-titulo:				fonsegar
-descripcion:		Impresión de volantes con la nueva marca de la empresa.
+titulo:				Site Los Nogales
+descripcion:		Diseño y desarrollo de sitio web.
 orden_proyecto: 	2
 imagen_proyecto:	/img/slide1.jpg
 categoria:			impresion

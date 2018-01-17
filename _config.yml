@@ -2,6 +2,8 @@ markdown: kramdown
 #baseurl:  /portfolio
 exclude: ['README.md']
 
+url: http://harbyrobayo.com
+
 sass:
       sass_dir: _sass
       style: nested

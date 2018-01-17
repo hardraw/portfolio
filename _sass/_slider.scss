@@ -121,6 +121,7 @@
 	letter-spacing: 3px;
 	padding-bottom: 2rem;
 	margin-top: 1rem;
+	opacity: 0;
 	-webkit-transform: translateY(-100%);
 	        transform: translateY(-100%);
 	-webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
@@ -156,14 +157,14 @@
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
 }
-.prev::after, .next::after  {
+.prev::after  {
 	content: '<';
 	font-size: 3rem;
 	font-weight: 100;
 	color: white;
 	position: absolute;
 	top: 10px;
-	left: 20px;
+	left: 10px;
 	height: .1rem;
 	min-height: 1px;
 	transition: all .3s;
@@ -237,13 +238,13 @@ button:focus {outline:0;}
 		}
 	}
 	
-	nav { 
-		right: 0; 
+	.cd-slider nav { 
+		right: 3vw; 
 	}
 
 	.counter {
 		font-size: 3rem;
-		width: 12vh;
+		width: 5vw;
 	}
 }
 

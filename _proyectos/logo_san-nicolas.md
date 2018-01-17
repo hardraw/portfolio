@@ -1,5 +1,5 @@
 ---
-titulo:				fonsegar
+titulo:				Branding San Nicolás
 descripcion:		Impresión de volantes con la nueva marca de la empresa.
 orden_proyecto: 	2
 imagen_proyecto:	/img/slide1.jpg

@@ -81,13 +81,14 @@
 	a.close {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 2vw;
 		background: white;
 		padding: 1rem;
-		font-size: 1rem;
+		font-size: 1.5rem;
 		text-align: center;
 		color: rgba(0,0,0,.4);
 		cursor: pointer;
+		font-weight: 100;
 
 	}
 
@@ -215,6 +216,10 @@
 			.text-lightbox {
 				overflow: initial;
 			}
+		}
+
+		a.close {
+			font-size: 2.5rem;
 		}
 	}
 }
