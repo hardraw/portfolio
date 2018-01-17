@@ -3,33 +3,59 @@
 ======================================*/
 
 footer {
-	background: $color-primario url('../img/decoration-mark.svg');
+	background: $color-primario;
 	background-repeat: no-repeat;
-	background-size: inherit;
-	background-position: top left;
 	padding: 4rem 0; 
 	position: relative;
-	.footer-content {
+	color: white;
+	font-size: .9rem;
+	font-weight: 100;
+	line-height: 2;
+	width: 100%;
 
+
+	.fb-like {
+		padding-top: 1rem;
+	}
+	.footer-content {
+		display: grid;
 		&-text {
 			padding: 2rem;
-			text-align: right;
+			text-align: center;
 			display:flex;
 			align-items: center;
 			justify-content: center;
 		}
 		&-logo {
-			grid-area: logo;
 			display:flex;
 			align-items: center;
 			justify-content: center;
 			img {
-				width: 232px;
-				height: 138px;
+				width: 200px;
 			}
 		}
 	}
 
+}
+
+@media screen and (min-width: 64em) {
+
+	footer {
+		display: flex;
+		justify-content: flex-end;
+	}
+	.footer-content {
+		max-width: 50%;
+		grid-template-columns: 1fr 1fr;
+		&-text {
+			width: 100%;
+			text-align: right;
+		}
+		&-logo {
+			width: 100%;
+		}
+
+	}
 }
 
 /*=====  End of ESTILOS FOOTER  ======*/

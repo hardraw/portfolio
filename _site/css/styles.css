@@ -24,6 +24,31 @@ a {
 
 main .content-page {
   padding: 4rem 1rem; }
+main h2 {
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #1B1D3F;
+  padding-bottom: 2rem;
+  text-transform: uppercase; }
+main p {
+  margin-bottom: 1.5rem; }
+main .text-center {
+  text-align: center; }
+main img {
+  width: 100%; }
+main blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 100;
+  border-left: 2px solid #00A099;
+  padding-left: 1rem; }
+main ul {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  padding: 0; }
+  main ul li {
+    padding-left: .5rem;
+    margin: 0; }
 
 @media screen and (min-width: 40em) {
   .row, .block-servicios--items, main, .cd-slider {
@@ -32,6 +57,55 @@ main .content-page {
 
   main .content-page {
     padding: 4rem 0; } }
+/**
+ *
+ *  blocks setup
+ *
+ */
+.block-basic {
+  background: white;
+  border-radius: 5px;
+  padding: 3rem 2rem;
+  margin-top: 2rem; }
+
+.block-column-1, .block-column-2 {
+  display: grid;
+  max-width: 100%; }
+
+.block-column-3, .block-planes {
+  max-width: 100%;
+  display: grid;
+  grid-gap: 2rem; }
+
+.block-column-2 {
+  grid-gap: 2rem; }
+  .block-column-2 .item1 {
+    order: 2; }
+  .block-column-2 .item2 {
+    order: 1; }
+
+@media screen and (min-width: 40em) {
+  .block-basic {
+    padding: 5rem 3rem;
+    margin-top: 2rem; }
+
+  .block-column-1 {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem; }
+
+  .block-column-2 {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem; }
+    .block-column-2 .item1 {
+      order: 1; }
+    .block-column-2 .item2 {
+      order: 2; }
+
+  .block-column-3, .block-planes {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .block-column-3 img, .block-planes img {
+      width: 100%; } }
 /*=======================================
 =            ESTILOS BOTONES            =
 =======================================*/
@@ -47,7 +121,9 @@ main .content-page {
   transition: all .3s;
   text-transform: uppercase;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center;
+  margin-top: 2rem; }
   .button-round:hover, .home-hero-links a:hover, .container-form .contact-form input[type="submit"]:hover, .cd-slider li.current .content a:hover, .content a:hover {
     background: #00d3ca;
     transition: all .3s; }
@@ -109,27 +185,45 @@ header {
 =            ESTILOS FOOTER            =
 ======================================*/
 footer {
-  background: #1B1D3F url("../img/decoration-mark.svg");
+  background: #1B1D3F;
   background-repeat: no-repeat;
-  background-size: inherit;
-  background-position: top left;
   padding: 4rem 0;
-  position: relative; }
-  footer .footer-content-text {
-    padding: 2rem;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  footer .footer-content-logo {
-    grid-area: logo;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    footer .footer-content-logo img {
-      width: 232px;
-      height: 138px; }
+  position: relative;
+  color: white;
+  font-size: .9rem;
+  font-weight: 100;
+  line-height: 2;
+  width: 100%; }
+  footer .fb-like {
+    padding-top: 1rem; }
+  footer .footer-content {
+    display: grid; }
+    footer .footer-content-text {
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    footer .footer-content-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      footer .footer-content-logo img {
+        width: 200px; }
 
+@media screen and (min-width: 64em) {
+  footer {
+    display: flex;
+    justify-content: flex-end; }
+
+  .footer-content {
+    max-width: 50%;
+    grid-template-columns: 1fr 1fr; }
+    .footer-content-text {
+      width: 100%;
+      text-align: right; }
+    .footer-content-logo {
+      width: 100%; } }
 /*=====  End of ESTILOS FOOTER  ======*/
 /*==============================================
 =            ESTILOS MENÚ PRINCIPAL            =
@@ -496,27 +590,174 @@ main {
     .page-title h1 {
       font-size: 3.2rem;
       letter-spacing: 3px; } }
-.container-portfolio .content-portfolio {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 1rem; }
-  .container-portfolio .content-portfolio .item-portafolio {
+.page-servicios img {
+  width: 250px;
+  display: block;
+  margin: auto; }
+
+.container-portfolio {
+  position: relative; }
+  .container-portfolio .content-buttons {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.5rem; }
+    .container-portfolio .content-buttons button {
+      padding: 1rem 0;
+      width: 100%;
+      border: 0;
+      background: none;
+      color: #1B1D3F;
+      font-size: .8rem;
+      cursor: pointer;
+      letter-spacing: 0px;
+      border-bottom: 1px solid #F8F8F8;
+      transition: all 300ms cubic-bezier(1, 0, 0, 1); }
+      .container-portfolio .content-buttons button:hover {
+        border-bottom: 1px solid #00A099;
+        transition: all 300ms cubic-bezier(1, 0, 0, 1); }
+  .container-portfolio .content-portfolio {
+    display: grid;
+    grid-gap: 1rem; }
+    .container-portfolio .content-portfolio .item-portafolio {
+      display: flex;
+      position: relative; }
+      .container-portfolio .content-portfolio .item-portafolio.small {
+        grid-column: span;
+        grid-row: span; }
+      .container-portfolio .content-portfolio .item-portafolio.landscape {
+        grid-column: span;
+        grid-row: span; }
+      .container-portfolio .content-portfolio .item-portafolio.vertical {
+        grid-column: span;
+        grid-row: span; }
+    .container-portfolio .content-portfolio img {
+      width: 100%;
+      display: block;
+      object-fit: cover; }
+    .container-portfolio .content-portfolio a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: all .3s; }
+      .container-portfolio .content-portfolio a:hover {
+        background: rgba(0, 160, 153, 0.3);
+        transition: all .3s; }
+
+.container-portfolio .lightbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 70;
+  top: 0;
+  left: -100vw;
+  background: white;
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 500ms cubic-bezier(1, 0, 0, 1); }
+  .container-portfolio .lightbox a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer; }
+  .container-portfolio .lightbox .content-lightbox {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40vh 60vh;
+    overflow: scroll;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    opacity: 0; }
+    .container-portfolio .lightbox .content-lightbox .image-lightbox img {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      object-fit: cover; }
+    .container-portfolio .lightbox .content-lightbox .text-lightbox {
+      overflow: scroll;
+      padding: 3rem; }
+      .container-portfolio .lightbox .content-lightbox .text-lightbox h2 {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: #1B1D3F; }
+      .container-portfolio .lightbox .content-lightbox .text-lightbox .text-category {
+        text-transform: uppercase;
+        font-size: .8rem;
+        letter-spacing: 3px; }
+      .container-portfolio .lightbox .content-lightbox .text-lightbox span {
+        font-size: .8rem;
+        display: block;
+        color: #6062B3;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        letter-spacing: 3px; }
+  .container-portfolio .lightbox:target {
+    left: 0;
+    opacity: 1;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1); }
+    .container-portfolio .lightbox:target .content-lightbox {
+      transition: all 500ms cubic-bezier(1, 0, 0, 1);
+      transition-delay: 300ms;
+      opacity: 1; }
+
+@media screen and (min-width: 40em) {
+  .container-portfolio {
+    min-height: 80vh; }
+    .container-portfolio .content-portfolio {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr); }
+    .container-portfolio .content-buttons {
+      display: flex;
+      margin-bottom: 1.5rem;
+      justify-content: flex-end; }
+      .container-portfolio .content-buttons button {
+        width: auto;
+        padding: 1rem 2rem;
+        border: 0;
+        background: none;
+        color: #1B1D3F;
+        font-size: .8rem;
+        cursor: pointer;
+        letter-spacing: 3px;
+        border-bottom: 1px solid #F8F8F8;
+        transition: all 300ms cubic-bezier(1, 0, 0, 1); }
+        .container-portfolio .content-buttons button:hover {
+          border-bottom: 1px solid #00A099;
+          transition: all 300ms cubic-bezier(1, 0, 0, 1); }
+
+  .item-portafolio {
     display: flex; }
-    .container-portfolio .content-portfolio .item-portafolio.small {
+    .item-portafolio.small {
       grid-column: span;
       grid-row: span; }
-    .container-portfolio .content-portfolio .item-portafolio.landscape {
+    .item-portafolio.landscape {
       grid-column: span 2;
       grid-row: span; }
-    .container-portfolio .content-portfolio .item-portafolio.vertical {
+    .item-portafolio.vertical {
       grid-column: span;
       grid-row: span 2; }
-  .container-portfolio .content-portfolio img {
-    width: 100%;
-    display: block;
-    object-fit: cover; }
 
+  .container-portfolio .lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .container-portfolio .lightbox .content-lightbox {
+      width: 100vw;
+      height: 100vh;
+      box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.2);
+      grid-template-rows: none;
+      grid-template-columns: 30% 70%;
+      overflow: initial; }
+      .container-portfolio .lightbox .content-lightbox .text-lightbox {
+        overflow: initial; } }
+@media screen and (min-width: 64em) {
+  .container-portfolio .lightbox .content-lightbox {
+    width: 80vw;
+    height: 80vh; } }
 /*================================================
 =            ESTILOS HOJA DE CONTACTO            =
 ================================================*/
@@ -549,6 +790,47 @@ main {
   .container-form {
     grid-template-columns: auto 500px; } }
 /*=====  End of ESTILOS HOJA DE CONTACTO  ======*/
+.block-planes {
+  grid-gap: 1rem; }
+  .block-planes h2 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #1B1D3F;
+    padding-bottom: 1rem;
+    display: block; }
+  .block-planes h3 {
+    text-align: center;
+    font-weight: 300;
+    font-size: .9rem;
+    color: #00A099;
+    padding-bottom: 1rem; }
+  .block-planes ul {
+    font-size: .9rem; }
+  .block-planes .block-basic {
+    padding: 2rem 2rem; }
+  .block-planes .precio-plan {
+    text-align: center;
+    color: #1B1D3F;
+    font-size: 1.4rem;
+    font-weight: 700; }
+  .block-planes .button-round, .block-planes .home-hero-links a, .home-hero-links .block-planes a, .block-planes .container-form .contact-form input[type="submit"], .container-form .contact-form .block-planes input[type="submit"], .block-planes .cd-slider li.current .content a, .cd-slider li.current .content .block-planes a, .block-planes .content a, .content .block-planes a {
+    display: block; }
+  .block-planes .more-info {
+    text-align: center;
+    display: block;
+    font-weight: 100;
+    font-size: .9rem;
+    color: #00A099;
+    padding-top: .5rem;
+    text-decoration: underline; }
+  .block-planes img {
+    width: 50%;
+    padding-bottom: 1rem; }
+
+@media screen and (min-width: 40em) {
+  .block-planes .plecio-plan {
+    font-size: 1rem; } }
 /* Slider Style
 --------------------------------------*/
 .cd-slider {

@@ -3,9 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- facebook -->
+	<meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+  	<meta property="og:type"          content="website" />
+  		<meta property="og:title"         content="Your Website Title" />
+  	<meta property="og:description"   content="Your description" />
+  	<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
+	
+
 	<title>My Portafolio</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Muli:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="http://localhost:4000/css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
@@ -15,25 +25,27 @@
 <body>
 
 	<header>
-		<div class="block-logo">
-			<img src="http://localhost:4000/img/logo-simbolo.svg" alt="">
+		<div class="block-logo"> 
+			<a href="">
+				<img src="/img/logo-simbolo.svg" alt="">
+			</a>
 		</div>
 				<nav class="main-menu">
 			<ul>
-				<li><a href="http://localhost:4000/portafolio.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_briefcase.svg" alt=""></span><span class="text-nav">portafolio</span></a></li>
-				<li><a href="http://localhost:4000/about.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_user.svg" alt=""></span><span class="text-nav">sobre mí</span></a></li>
-				<li><a href="http://localhost:4000/servicios.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_cup-designer.svg" alt=""></span><span class="text-nav">servicios</span></a></li>
-				<li><a href="http://localhost:4000/contactenos.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_mail.svg" alt=""></span><span class="text-nav">contacto</span></a></li>
+				<li><a href="/portafolio.html"><span class="icon-nav"><img src="/img/icon_briefcase.svg" alt=""></span><span class="text-nav">portafolio</span></a></li>
+				<li><a href="/about.html"><span class="icon-nav"><img src="/img/icon_user.svg" alt=""></span><span class="text-nav">sobre mí</span></a></li>
+				<li><a href="/servicios.html"><span class="icon-nav"><img src="/img/icon_cup-designer.svg" alt=""></span><span class="text-nav">servicios</span></a></li>
+				<li><a href="/contactenos.html"><span class="icon-nav"><img src="/img/icon_mail.svg" alt=""></span><span class="text-nav">contacto</span></a></li>
 			</ul>
 		</nav>
 	</header>
 
  		<div class="home-hero">
 		<div class="content-hero">
-			<img src="http://localhost:4000/img/logo-hero.svg" alt="">
+			<img src="/img/logo-hero.svg" alt="">
 			<div class="home-hero-links">
-				<a href="http://localhost:4000/portfolio">Portfolio</a>
-				<a href="http://localhost:4000/suscripcion">Suscribirme</a>
+				<a href="/portfolio">Portfolio</a>
+				<a href="/suscripcion">Suscribirme</a>
 			</div>
 		</div>		
 	</div>
@@ -46,11 +58,11 @@
 	<div class="cd-slider">
 	    <ul>
 	      <li>
-	        <div class="image" style="background-image:url(http://localhost:4000/img/slide1.jpg);"></div>
+	        <div class="image" style="background-image:url(/img/slide1.jpg);"></div>
 	        <div class="content">
 	        	<div class="category">BRANDING</div>
 	         	<h3>Branding San Nicolás</h3>
-	         	<a href="#">ver más</a>
+	         	<a href="/portafolio.html#tarjetas_fonsegar">ver más</a>
 	        </div>
 	      </li>
 	      <li>
@@ -101,21 +113,21 @@
 		<div class="block-servicios--items">
 			<div class="item-servicio">
 				<a href="">
-					<img src="http://localhost:4000/img/icon_web.svg" alt="">
+					<img src="/img/icon_web.svg" alt="">
 					<h2>Diseño Web</h2>
 				</a>
 				
 			</div>
 			<div class="item-servicio">
 				<a href="">
-					<img src="http://localhost:4000/img/icon_grafico.svg" alt="">
+					<img src="/img/icon_grafico.svg" alt="">
 					<h2>Diseño Gráfico</h2>
 				</a>
 				
 			</div>
 			<div class="item-servicio">
 				<a href="">
-					<img src="http://localhost:4000/img/icon_impresion.svg" alt="">
+					<img src="/img/icon_impresion.svg" alt="">
 					<h2>Impresión</h2>
 				</a>
 				
@@ -156,9 +168,12 @@
 	<footer>
 		<div class="footer-content">
 			<div class="footer-content-text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
-			</div>
-			<div id="fb-root"></div>
+				<div class="text">
+					Carrera 18 No. 14 A 51 Barrio San Carlos <br>
+					Zipaquirá - Cundinamarca <br>
+					+571 301 232 2936 <br>
+					hola@harbyrobayo.com <br>
+					<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -168,8 +183,12 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				</div>
+				
+			</div>
+			
 			<div class="footer-content-logo">
-				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
+				<img src="/img/logo-hero.svg" alt="">
 			</div>
 		</div>
 	</footer>
@@ -177,7 +196,7 @@
 
 <!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
-	 	<script src="http://localhost:4000/js/slider.js"></script>
+	 	<script src="/js/slider.js"></script>
 
 
 	 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js">

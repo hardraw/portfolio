@@ -1,7 +1,11 @@
-markdown: redcarpet
+markdown: kramdown
 #baseurl:  /portfolio
 exclude: ['README.md']
 
 sass:
       sass_dir: _sass
       style: nested
+
+collections:
+      proyectos:
+        output: true

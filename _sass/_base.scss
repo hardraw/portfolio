@@ -17,6 +17,7 @@ a {
 }
 
 
+
 .row {
 	max-width: 100%;
 }
@@ -25,6 +26,47 @@ main {
 	.content-page {
 		padding: 4rem 1rem;
 	}
+
+
+	h2 {
+			font-weight: 100;
+			letter-spacing: 3px;
+			color: $color-primario;
+			padding-bottom: 2rem;
+			text-transform: uppercase;
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+	img {
+ 			width: 100%;
+ 	}
+
+ 	blockquote {
+ 		font-style: italic;
+ 		font-size: 1.2rem;
+ 		font-weight: 100;
+ 		border-left: 2px solid $color-secundario;
+ 		padding-left: 1rem;
+ 	}
+
+
+ 	ul {
+ 		margin-left: 1rem;
+ 		margin-bottom: 2rem;
+ 		padding: 0;
+ 		li {
+ 			padding-left: .5rem;
+ 			margin: 0;
+
+ 		}
+ 	}
 }
 
 
@@ -38,5 +80,88 @@ main {
 		.content-page {
 			padding: 4rem 0;
 		}
+
+		
 	}
 }
+
+
+/**
+ *
+ *  blocks setup
+ *
+ */
+
+
+ .block-basic {
+ 	background: white;
+ 	border-radius: 5px;
+ 	padding: 3rem 2rem;
+ 	margin-top: 2rem;
+ }
+
+ .block-column-1, .block-column-2 {
+ 	display: grid;
+ 	max-width: 100%;
+ 	
+ }
+
+ .block-column-3 {
+ 	max-width: 100%;
+ 	display: grid;
+ 	grid-gap: 2rem;
+ }
+
+ .block-column-2 {
+ 	grid-gap: 2rem;
+ 	.item1 {
+ 		order: 2;
+ 	}
+
+ 	.item2 {
+ 		order:1;
+ 	}
+ }
+
+
+
+
+
+
+@media screen and (min-width:40em){
+
+
+
+ 	.block-basic {
+	 	padding: 5rem 3rem;
+	 	margin-top: 2rem;
+	 }
+
+ 	.block-column-1 {
+ 		grid-template-columns: 1fr;
+ 		grid-gap: 3rem;
+ 		
+ 	}
+
+
+ 	.block-column-2 {
+ 		grid-template-rows: none;
+ 		grid-template-columns: 1fr 1fr;
+ 		grid-gap: 3rem;
+ 		.item1 {
+	 		order: 1;
+	 	}
+
+	 	.item2 {
+	 		order:2;
+	 	}
+	 		
+	 	}
+
+ 	.block-column-3 {
+ 		grid-template-columns: 1fr 1fr 1fr;
+ 		img {
+ 			width: 100%;
+ 		}
+ 	}
+ }

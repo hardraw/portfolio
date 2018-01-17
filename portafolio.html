@@ -1,31 +1,46 @@
 ---
 layout: default
 title: Portafolio
-excerpt: Aqui van los servicios
+excerpt: Aquí puedes encontrar mis trabajos más destacados, si estás interesado en mi ayuda no dudes en comunicarte conmigo.
 ---
 
 
-	<section class="container-portfolio">
-		<div class="buttons">
-			<button type="button" data-filter="all">Show all</button>
-			<button type="button" data-filter=".web">Category A</button>
-			<button type="button" data-filter=".branding">Category B</button>
-			<button type="button" data-filter=".print">Category C</button>
-			<button type="button" data-filter="none">Hide all</button>
-		</div>
-		<div class="content-portfolio">
-			<div class="mix item-portafolio vertical web"><img src="http://placehold.it/300x300/f10/fff" alt=""></div>
-			<div class="mix item-portafolio landscape branding"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio print"><img src="http://placehold.it/300x300/f90/fff" alt=""></div>
-			<div class="mix item-portafolio vertical branding"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio landscape web"><img src="http://placehold.it/300x300/f870/fff" alt=""></div>
-			<div class="mix item-portafolio vertical print"><img src="http://placehold.it/300x300/f60/fff" alt=""></div>
-			<div class="mix item-portafolio landscape web"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio vertical branding"><img src="http://placehold.it/300x300/f90/fff" alt=""></div>
-			<div class="mix item-portafolio"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-			<div class="mix item-portafolio"><img src="http://placehold.it/300x300/f80/fff" alt=""></div>
-		</div>
-		
-	</section>
+			<section class="container-portfolio">
+				<div class="content-buttons">
+					<button type="button" data-filter="all">TODOS</button>
+					<button type="button" data-filter=".web">WEB</button>
+					<button type="button" data-filter=".branding">BRANDING</button>
+					<button type="button" data-filter=".impresion">IMPRESIÓN</button>
+				</div>
+
+
+				<div class="content-portfolio">
+					{% for proyecto in site.proyectos %}
+						<div class="mix item-portafolio {{proyecto.clase_grid}} {{proyecto.categoria}} ">
+							<img src="{{site.baseurl}}{{proyecto.imagen_proyecto}}" alt="">
+							<a href="#{{proyecto.id_proyecto}}"></a>
+				
+						</div>
+					{% endfor %}
+				</div>
+
+				{% for proyecto in site.proyectos %}
+				<div class="lightbox" id="{{proyecto.id_proyecto}}">
+					<a href="#!" class="close">X</a>
+					<div class="content-lightbox">
+						<div class="image-lightbox">
+							<img src="{{site.baseurl}}{{proyecto.imagen_proyecto}}" alt="">
+						</div>
+						<div class="text-lightbox">
+							<div class="text-category">
+								{{proyecto.categoria}}
+							</div>
+							<h2>{{proyecto.titulo}}</h2>
+							<span>{{proyecto.fecha}}</span>
+							<p>{{proyecto.content}}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</section>

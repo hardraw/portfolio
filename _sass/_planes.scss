@@ -1,0 +1,64 @@
+.block-planes {
+	@extend .block-column-3;
+	grid-gap: 1rem;
+	h2 {
+		text-align: center;
+		font-weight: 700;
+		letter-spacing: 0;
+		color: $color-primario;
+		padding-bottom: 1rem;
+		display: block;
+	}
+
+	h3 {
+		text-align: center;
+		font-weight: 300;
+		font-size: .9rem;
+		color: $color-secundario;
+		padding-bottom: 1rem;
+
+	}
+
+	ul {
+		font-size: .9rem;
+	}
+
+	.block-basic {
+		padding: 2rem 2rem;
+	}
+
+	.precio-plan {
+		text-align: center;
+		color: $color-primario;
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+
+	.button-round {
+		display: block;
+	}
+
+	.more-info {
+		text-align: center;
+		display: block;
+		font-weight: 100;
+		font-size: .9rem;
+		color: $color-secundario;
+		padding-top: .5rem;
+		text-decoration: underline;
+	}
+
+	img {
+		width: 50%;
+		padding-bottom: 1rem;
+	}
+}
+
+
+@media screen and (min-width: 40em) {
+	.block-planes {
+		.plecio-plan {
+			font-size: 1rem;
+		}
+	}
+}

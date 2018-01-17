@@ -3,9 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- facebook -->
+	<meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+  	<meta property="og:type"          content="website" />
+  		<meta property="og:title"         content="Your Website Title" />
+  	<meta property="og:description"   content="Your description" />
+  	<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
+	
+
 	<title>My Portafolio</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Muli:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="http://localhost:4000/css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
@@ -16,14 +26,16 @@
 
 	<header>
 		<div class="block-logo">
-			<img src="http://localhost:4000/img/logo-simbolo.svg" alt="">
+			<a href="/">
+				<img src="/img/logo-simbolo.svg" alt="">
+			</a>
 		</div>
 				<nav class="main-menu">
 			<ul>
-				<li><a href="http://localhost:4000/portafolio.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_briefcase.svg" alt=""></span><span class="text-nav">portafolio</span></a></li>
-				<li><a href="http://localhost:4000/about.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_user.svg" alt=""></span><span class="text-nav">sobre mí</span></a></li>
-				<li><a href="http://localhost:4000/servicios.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_cup-designer.svg" alt=""></span><span class="text-nav">servicios</span></a></li>
-				<li><a href="http://localhost:4000/contactenos.html"><span class="icon-nav"><img src="http://localhost:4000/img/icon_mail.svg" alt=""></span><span class="text-nav">contacto</span></a></li>
+				<li><a href="/portafolio.html"><span class="icon-nav"><img src="/img/icon_briefcase.svg" alt=""></span><span class="text-nav">portafolio</span></a></li>
+				<li><a href="/about.html"><span class="icon-nav"><img src="/img/icon_user.svg" alt=""></span><span class="text-nav">sobre mí</span></a></li>
+				<li><a href="/servicios.html"><span class="icon-nav"><img src="/img/icon_cup-designer.svg" alt=""></span><span class="text-nav">servicios</span></a></li>
+				<li><a href="/contactenos.html"><span class="icon-nav"><img src="/img/icon_mail.svg" alt=""></span><span class="text-nav">contacto</span></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -39,8 +51,41 @@
 
 
 		<section class="content-page">
-				<div class="block-servicios">
-		Aqui van los serviciossssssss
+				<div class="block-basic page-servicios">
+		<div class="block-column-2">
+			<div class="item">
+				<img src="/img/plan_basico.svg" alt="">
+			</div>
+			<div class="item">
+				<h2>Diseño web</h2>
+				<p>El avance acelerado de las tecnologías hace que las empresas requieran de unas herramientas de comunicación más eficaces. Es por eso que un sitio web es la forma más eficiente de llegar a un público objetivo sin importar horario ni distancias.</p>
+				<a href="" class="button-round">conoce los planes</a>
+			</div>
+		</div>
+	</div>
+	<div class="block-basic page-servicios">
+		<div class="block-column-2">
+			<div class="item1">
+				<h2>diseño gráfico</h2>
+				<p>La imagen gráfica de tu negocio debería ser uno de los pilares estratégicos de tu comunicación. Una buena imagen genera oportunidades y empatía en tu público, además te diferencia de la multitud. </p>
+				<a href="" class="button-round">contáctame</a>
+			</div>
+			<div class="item2">
+				<img src="/img/servicio_design.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="block-basic page-servicios">
+		<div class="block-column-2">
+			<div class="item">
+				<img src="/img/servicio_print.svg" alt="">
+			</div>
+			<div class="item">
+				<h2>Impresos</h2>
+				<p>Una buena impresión genera confianza y estatus en tu negocio, ya sea desde una tarjeta de presentación o un manual interno. El poder usar diversos materiales, hace que el usuario perciba el producto de una distintas maneras. El simple hecho de poder usar el tacto genera confianza y credibilidad. </p>
+				<a href="" class="button-round">contáctame</a>
+			</div>
+		</div>
 	</div>
 
 		</section>
@@ -54,9 +99,12 @@
 	<footer>
 		<div class="footer-content">
 			<div class="footer-content-text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, non?
-			</div>
-			<div id="fb-root"></div>
+				<div class="text">
+					Carrera 18 No. 14 A 51 Barrio San Carlos <br>
+					Zipaquirá - Cundinamarca <br>
+					+571 301 232 2936 <br>
+					hola@harbyrobayo.com <br>
+					<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -66,8 +114,12 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				</div>
+				
+			</div>
+			
 			<div class="footer-content-logo">
-				<img src="http://localhost:4000/img/logo-hero.svg" alt="">
+				<img src="/img/logo-hero.svg" alt="">
 			</div>
 		</div>
 	</footer>
@@ -75,7 +127,7 @@
 
 <!-- 		<script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
-	 	<script src="http://localhost:4000/js/slider.js"></script>
+	 	<script src="/js/slider.js"></script>
 
 
 	 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js">
