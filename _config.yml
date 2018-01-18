@@ -6,8 +6,12 @@ url: http://harbyrobayo.com
 
 sass:
       sass_dir: _sass
-      style: nested
+      style: compressed
 
 collections:
       proyectos:
         output: true
+
+
+plugins:
+- jekyll-autoprefixer

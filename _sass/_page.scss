@@ -44,6 +44,7 @@ main {
 }
 
 
+
 @media screen and (min-width: 40em) {
 	.page-title {
 		padding-top: 10rem;
@@ -62,4 +63,19 @@ main {
 		display: block;
 		margin: auto;
 	}
+}
+
+.skills {
+	img {
+		width: 60%;
+		display: block;
+		margin: auto;
+	}
+
+}
+
+.foto-perfil {
+	max-width: 400px;
+	display: block;
+	margin: auto;
 }
