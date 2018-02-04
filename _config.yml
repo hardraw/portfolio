@@ -2,7 +2,6 @@ markdown: kramdown
 #baseurl:  /portfolio
 exclude: ['README.md']
 
-url: www.harbyrobayo.com
 
 sass:
       sass_dir: _sass
